@@ -30,6 +30,19 @@ namespace WebApp_OOPConcepts_Practice
 
                 var dateObject = new Date(year, month, day);
                 Console.Write($"The data entered is: {dateObject}");
+
+                Employee salaryEmployee = new SalaryEmployee()
+                {
+                    Id  = 1,
+                    firstName = "Patricia",
+                    lastName = "Alvarez",
+                    birthDate = dateObject,
+                    hiringDate = dateObject,
+                    isActive = true,
+                    salary = 1160000
+                };
+
+                Console.WriteLine(salaryEmployee);
             }
             catch (Exception message)
             {

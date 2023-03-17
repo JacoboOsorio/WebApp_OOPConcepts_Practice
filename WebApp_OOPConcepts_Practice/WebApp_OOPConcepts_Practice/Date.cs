@@ -74,10 +74,12 @@ namespace WebApp_OOPConcepts_Practice
             //return(_year + "/" + _month + "/" + _day);
 
             //Interpolacion
-            return $"{_year}/{_month}/{_day}";
+            //return $"{_year}/{_month}/{_day}";
 
             //String.Format
-            //return String.Format("{0}/{1}/{2}", _year, _month, _day);
+            //The numbers after the colon, means the
+            // number of digits that i want to show
+            return String.Format("{0:0000}/{1:00}/{2:00}", _year, _month, _day);
         }
 
         #endregion
