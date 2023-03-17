@@ -34,7 +34,7 @@ namespace WebApp_OOPConcepts_Practice
 
                 Employee salaryEmployee = new SalaryEmployee()
                 {
-                    Id  = 1,
+                    Id  = 100,
                     firstName = "Patricia",
                     lastName = "Alvarez",
                     birthDate = dateObject,
@@ -48,7 +48,7 @@ namespace WebApp_OOPConcepts_Practice
 
                 Employee commissionEmployee = new CommissionEmployee()
                 {
-                    Id = 2,
+                    Id = 200,
                     firstName = "Julio",
                     lastName = "Perez",
                     birthDate = dateObject,
@@ -98,6 +98,22 @@ namespace WebApp_OOPConcepts_Practice
                 };
 
                 Console.WriteLine(hourlyEmployee);
+                Console.WriteLine("");
+
+                Employee baseCommissionEmployee = new BaseCommissionEmployee()
+                {
+                    Id = 400,
+                    firstName = "Armando",
+                    lastName = "Tirado",
+                    birthDate = new Date(year, month, day),
+                    hiringDate = new Date(year, month, day),
+                    isActive = true,
+                    commissionPercentage = 10,
+                    sales = 30000000,
+                    Base = 5000000
+                };
+
+                Console.WriteLine(baseCommissionEmployee);
             }
             catch (Exception message)
             {
