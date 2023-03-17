@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Data;
 
 namespace WebApp_OOPConcepts_Practice
 {
@@ -43,6 +44,21 @@ namespace WebApp_OOPConcepts_Practice
                 };
 
                 Console.WriteLine(salaryEmployee);
+                Console.WriteLine("");
+
+                Employee commissionEmployee = new CommissionEmployee()
+                {
+                    Id = 2,
+                    firstName = "Julio",
+                    lastName = "Perez",
+                    birthDate = dateObject,
+                    hiringDate = dateObject,
+                    isActive = false,
+                    commissionPercentage = 5,
+                    sales = 20000000,
+                };
+
+                Console.WriteLine(commissionEmployee);
             }
             catch (Exception message)
             {
