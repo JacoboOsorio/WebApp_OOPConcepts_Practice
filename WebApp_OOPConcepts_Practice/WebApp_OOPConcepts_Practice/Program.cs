@@ -59,6 +59,45 @@ namespace WebApp_OOPConcepts_Practice
                 };
 
                 Console.WriteLine(commissionEmployee);
+                Console.WriteLine("");
+
+                Console.WriteLine("Please type your ID: ");
+                int id = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("");
+
+                Console.WriteLine("Please type your first name: ");
+                string firstName = Console.ReadLine();
+                Console.WriteLine("");
+
+                Console.WriteLine("Please type your last name: ");
+                string lastName = Console.ReadLine();
+                Console.WriteLine("");
+
+                Console.WriteLine("Please type if it's active: ");
+                bool isActive = Convert.ToBoolean(Console.ReadLine());
+                Console.WriteLine("");
+
+                Console.WriteLine("Please type the number of hours: ");
+                float hours = Convert.ToSingle(Console.ReadLine());
+                Console.WriteLine("");
+
+                Console.WriteLine("Please type the value per hour: ");
+                decimal hourValue = Convert.ToDecimal(Console.ReadLine());
+                Console.WriteLine("");
+
+                Employee hourlyEmployee = new HourlyEmployee()
+                {
+                    Id = id,
+                    firstName = firstName,
+                    lastName = lastName,
+                    birthDate = dateObject,
+                    hiringDate = dateObject,
+                    isActive = isActive,
+                    hours = hours,
+                    hourValue = hourValue
+                };
+
+                Console.WriteLine(hourlyEmployee);
             }
             catch (Exception message)
             {
