@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Data;
+using WebApp_OOPConcepts_Practice.Helpers;
 
 namespace WebApp_OOPConcepts_Practice
 {
@@ -7,6 +9,14 @@ namespace WebApp_OOPConcepts_Practice
     {
         static void Main(string[] args)
         {
+            /*
+             * Camel case: Use it only for fields and 
+             * variables.
+             * 
+             * Pascal case: Use it only to name classes,
+             * properties and methods.
+             */
+
             try
             {
                 Console.WriteLine("********************************");
@@ -43,7 +53,7 @@ namespace WebApp_OOPConcepts_Practice
                     salary = 1160000
                 };
 
-                Console.WriteLine(salaryEmployee);
+                //Console.WriteLine(salaryEmployee);
                 Console.WriteLine("");
 
                 Employee commissionEmployee = new CommissionEmployee()
@@ -58,7 +68,7 @@ namespace WebApp_OOPConcepts_Practice
                     sales = 20000000,
                 };
 
-                Console.WriteLine(commissionEmployee);
+                //Console.WriteLine(commissionEmployee);
                 Console.WriteLine("");
 
                 Console.WriteLine("Please type your ID: ");
@@ -97,7 +107,7 @@ namespace WebApp_OOPConcepts_Practice
                     hourValue = hourValue
                 };
 
-                Console.WriteLine(hourlyEmployee);
+                //Console.WriteLine(hourlyEmployee);
                 Console.WriteLine("");
 
                 Employee baseCommissionEmployee = new BaseCommissionEmployee()
@@ -113,8 +123,13 @@ namespace WebApp_OOPConcepts_Practice
                     Base = 5000000
                 };
 
-                Console.WriteLine(baseCommissionEmployee);
+                //Console.WriteLine(baseCommissionEmployee);
                 Console.WriteLine("");
+
+                EmployeeHelper employeeHelper = new EmployeeHelper(salaryEmployee, commissionEmployee, hourlyEmployee, baseCommissionEmployee);
+
+                Console.WriteLine($"Total payroll..... {employeeHelper.getPayrollFromActiveEmployees():C2}");
+                Console.WriteLine(" ");
 
                 Invoice invoice = new Invoice()
                 {
